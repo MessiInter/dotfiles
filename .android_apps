@@ -1,0 +1,28 @@
+# Useful
+alias aida64="am start -n com.finalwire.aida64/.HHMainActivity"
+alias adguard="am start -n com.adguard.android/.ui.activity.MainActivity"
+alias apktool-m="am start -n ru.maximoff.apktool/.SplashActivity"
+alias apktool="apktool-m" # Apktool M
+alias authenticator="am start -n com.google.android.apps.authenticator2/com.google.android.apps.authenticator.AuthenticatorActivity"
+alias gauth="authenticator" # Short alias
+alias google-chrome="am start -n com.android.chrome/com.google.android.apps.chrome.Main"
+alias chrome="google-chrome" # Chrome browser
+alias termux-app="am start -n com.termux/.app.TermuxActivity"
+alias termux="termux-app" # Termux
+alias zarchiver="am start -n ru.zdevs.zarchiver/.ZArchiver"
+alias archiver="zarchiver" # ZArchiver
+alias filemgr="archiver"
+alias shizuku="am start -n moe.shizuku.privileged.api/moe.shizuku.manager.MainActivity"
+
+# Popular
+alias tiktok-lite="am start -n com.zhiliaoapp.musically.go/com.ss.android.ugc.aweme.main.homepage.MainActivity" # TikTok (Lite)
+alias spotify="am start -n com.spotify.music/.MainActivity" # Spotify
+alias music="spotify"
+alias m="music"
+alias zalo="am start -n com.zing.zalo/.ui.SplashActivity" # Zalo for Vietnamese people
+
+# Games
+alias flappy-bird="am start -n com.dotgears.flappybird/com.dotgears.flappy.SplashScreen" # Flappy Bird (original version only)
+alias flappy="flappy-bird"
+
+
