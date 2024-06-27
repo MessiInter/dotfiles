@@ -12,7 +12,7 @@ plugins=(
 # end of oh-my-zsh(1) chunk
 
 # env chunk
-PATH="$PREFIX/bin:$HOME/.local/bin:$PATH"
+PATH="$PREFIX/local/bin:$HOME/.yarn/bin:$PREFIX/bin:$HOME/.local/bin:$PATH"
 export PATH
 
 LINK="https://github.com/LKmXr"
@@ -59,13 +59,22 @@ zinit wait lucid for \
 
 ### End of Zinit's installer chunk
 
+# zoxide(z) chunk
+eval "$(zoxide init zsh)"
+alias cd="z"
+
+# end of zoxide(z) chunk
+
 # powerlevel10k chunk
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # end of powerlevel10k chunk
 
+# starship chunk
 eval "$(starship init zsh)"
+
+# end of starship chunk
 
 # dotfiles chunk
 source $HOME/.config/lf/icons
@@ -73,5 +82,5 @@ source $HOME/.aliases
 source $HOME/.android_apps
 source $HOME/.autostart
 
-# end of dotsfiles chunk
+# end of dotfiles chunk
 
