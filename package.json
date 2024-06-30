@@ -1,0 +1,38 @@
+{
+  "name": "dotfiles",
+  "version": "0.0.0",
+  "private": true,
+  "description": "MessiInter's personal \"dotfiles\" for Termux (Android)",
+  "scripts": {
+    "dev": "mc",
+    "dotfiles:copy": "for F in $(ls --color=never); do cp ${HOME}/${F} . 2>/dev/null; done; exit 0",
+    "git:add": "git add --all",
+    "git:commit": "git commit --allow-empty -m \"Update all dotfiles\"",
+    "git:push": "git push -u origin \"master\"",
+    "git:cnp": "for O in $(echo add commit push); do yarn git:${O}; done"
+  },
+  "platform": [
+    "!win32"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MessiInter/dotfiles.git"
+  },
+  "keywords": [
+    "dotfiles",
+    "personal",
+    "termux",
+    "termux-app",
+    "config",
+    "confifguration",
+    "dot",
+    "config-file",
+    "android"
+  ],
+  "author": "MessiInter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MessiInter/dotfiles/issues"
+  },
+  "homepage": "https://github.com/MessiInter/dotfiles#readme"
+}

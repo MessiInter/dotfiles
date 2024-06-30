@@ -1,4 +1,4 @@
-# oh-my-zsh(1) chunk
+# oh-my-zsh(1)
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME=""
 plugins=(
@@ -9,9 +9,9 @@ plugins=(
   zsh-fzf-history-search
 )
 
-# end of oh-my-zsh(1) chunk
+# end of oh-my-zsh(1)
 
-# env chunk
+# env
 PATH="$PREFIX/local/bin:$HOME/.yarn/bin:$PREFIX/bin:$HOME/.local/bin:$PATH"
 export PATH
 
@@ -23,12 +23,12 @@ export LINK_SSH
 
 export TERM=xterm-256color
 
-# end of env chunk
+# end of env
 
-# oh-my-zsh(2) chunk
+# oh-my-zsh(2)
 source $ZSH/oh-my-zsh.sh
 
-# end of oh-my-zsh(2) chunk
+# end of oh-my-zsh(2)
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -51,36 +51,41 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
 
+### End of Zinit's installer chunk
+
+# Zinit Plugins
 zinit light zdharma-continuum/fast-syntax-highlighting
 
 zinit wait lucid for \
  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
     zdharma-continuum/fast-syntax-highlighting \
 
-### End of Zinit's installer chunk
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-# zoxide(z) chunk
+# end of Zinit Plugins
+
+# zoxide(z)
 eval "$(zoxide init zsh)"
 alias cd="z"
 
-# end of zoxide(z) chunk
+# end of zoxide(z)
 
-# powerlevel10k chunk
+# fzf
+source <(fzf --zsh)
+
+# end of fzf
+
+# powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # end of powerlevel10k chunk
 
-# starship chunk
-eval "$(starship init zsh)"
-
-# end of starship chunk
-
-# dotfiles chunk
+# dotfiles
 source $HOME/.config/lf/icons
 source $HOME/.aliases
 source $HOME/.android_apps
 source $HOME/.autostart
 
-# end of dotfiles chunk
+# end of dotfiles
 
